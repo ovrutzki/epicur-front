@@ -13,6 +13,8 @@
   gap: 2.8vw;
   box-shadow: 0 10px 10px gray;
   padding: 2vw;
+  max-height: 580px;
+
 }
 #sign-title {
   display: flex;
@@ -107,8 +109,42 @@
 #black-style:hover {
   background-color: rgba(81, 81, 81, 1);
   cursor: pointer;
-
 }
 .sign-in-btn:hover {
-    cursor: no-drop;
+  cursor: no-drop;
+}
+
+@media screen and (max-width: 450px) {
+  #sign-main {
+    width: 90%;
+    height: 90%;
+  }
+  #sign-title h1 {
+    font-size: 8vw;
+    line-height: 8vw;
+  }
+  #sign-title h2 {
+    font-family: "Helvetica";
+    font-size: 6vw;
+    line-height: 6vw;
+  }
+
+  .sign-in-btn {
+    height: 6vw;
+    width: 28vw;
+    padding: 5px 24px;
+    font-size: 5vw;
+    line-height: 5vw;
+  }
+  #sign-details input {
+    width: 50vw;
+  }
+  #sign-details label {
+    font-size: 4vw;
+    line-height: 6vw;
+  }
+  #sign-details input::placeholder {
+    font-size: 3vw;
+    line-height: 6vw;
+  }
 }

@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
           </NavLink>
         </div>
         <div id="right-nav">
-          <div>Hello {userName ? userName : "Guest"}</div>
+          <div id="user-name">Hello {userName ? userName : "Guest"}</div>
           <div id="search">
             <input type="text" placeholder="Search for restaurant, Chefs" />
           </div>

@@ -159,6 +159,12 @@ nav{
   all: unset;
   display:block ;
 }
+#user-name{
+  font-size: 3vw;
+    width: 5vw;
+    position: absolute;
+    left: 25vw;
+}
 
 }
   

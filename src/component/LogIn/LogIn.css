@@ -117,4 +117,48 @@
   span{
     font-family: "Helvetica bold";
   }
+
+  @media screen and (max-width: 450px) {
+    #login-main {
+      width: 90%;
+      height: 90%;
+    }
+
+    #title h1 {
+      font-size: 8vw;
+      line-height: 8vw;
+    }
+    #title h2 {
+      font-family: "Helvetica";
+      font-size: 6vw;
+      line-height: 6vw;
+    }
+    .login-btn {
+      height: 6vw;
+      width: 28vw;
+      padding: 5px 24px;
+      font-size: 5vw;
+      line-height: 5vw;
+    }
+    #sign-in-btn{
+      height: 6vw;
+      width: 28vw;
+      padding: 5px 24px;
+      font-size: 5vw;
+      line-height: 5vw;
+    }
+    #login-details input {
+      width: 30vw;
+    }
+    
+    #login-details input::placeholder {
+      font-size: 4vw;
+      line-height:6vw;
+    }
+    #login-details p{
+      margin-top: 1vw;
+      line-height: 4vw;
+      font-size: 4vw;
+    }
+  }
   
