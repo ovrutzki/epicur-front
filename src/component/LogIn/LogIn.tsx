@@ -17,7 +17,7 @@ const LogIn: React.FC = () => {
   const dispatch = useDispatch();
   const userSelector = useSelector((state: IRootState) => state.user.userInfo);
   const dishInCart = useSelector((state: IRootState) => state.order.value);
-  const userLogged = sessionStorage.getItem("user-logged-in")
+  const userLogged = sessionStorage.getItem("user-logged-in");
   const userTokenState = useSelector((state: IRootState) => state.user.token);
   const navigate = useNavigate();
   const [email, setEmail]: [string, Dispatch<SetStateAction<string>>] =
@@ -39,25 +39,26 @@ const LogIn: React.FC = () => {
       setBlack("");
     }
   }, [email, password]);
-  useEffect(() => {
-   
-  }, [firstName]);
+  useEffect(() => {}, [firstName]);
 
   const loginUser = async (email: string, password: string) => {
     try {
       const userData = await axios.post(
-        "http://localhost:8000/api/users/login",
+        "https://eran-epicure-project-back.onrender.com//api/users/login",
         {
           email: email,
           password: password,
         }
       );
-      sessionStorage.setItem("user-logged-in",JSON.stringify(userData.data.user));
+      sessionStorage.setItem(
+        "user-logged-in",
+        JSON.stringify(userData.data.user)
+      );
       sessionStorage.setItem("user-token", userData.data.token);
       dispatch(getUserData(userData.data.user));
       dispatch(getUserToken(userData.data.token));
       setFirstName(userData.data.user.first);
-      afterLogIn()
+      afterLogIn();
     } catch (error: any) {
       alert(error.message);
       console.log(error);
@@ -75,29 +76,31 @@ const LogIn: React.FC = () => {
   };
   const afterLogIn = () => {
     dishInCart.map((dish) => {
-      addCartToUserData(dish)
-    })
-    navigateFunction()
-  }
+      addCartToUserData(dish);
+    });
+    navigateFunction();
+  };
 
-  const logOut = () =>{
-    sessionStorage.clear()
-    dispatch(emptyCart()) 
+  const logOut = () => {
+    sessionStorage.clear();
+    dispatch(emptyCart());
     setTimeout(navigateFunction, 1000);
+  };
 
-  }
-  
   return (
     <>
       <Navbar />
       <div id="login-container">
         <div id="login-main">
-          {userLogged ? (<>
-            <h1>Welcome <span>{userSelector.first}</span>, you are logged-in now</h1>
-            <button onClick={logOut}  id="sign-in-btn">
+          {userLogged ? (
+            <>
+              <h1>
+                Welcome <span>{userSelector.first}</span>, you are logged-in now
+              </h1>
+              <button onClick={logOut} id="sign-in-btn">
                 LOG OUT
               </button>
-              </>
+            </>
           ) : (
             <>
               <div id="title">

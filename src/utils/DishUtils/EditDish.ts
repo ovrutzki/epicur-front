@@ -22,10 +22,9 @@ export const editExistingDish = async (values: AllInOne) => {
   const img = values.img;
   const _id = values._id;
 
-
   try {
     const addingChef = await axios.post(
-      "http://localhost:8000/api/dishes/edit",
+      "https://eran-epicure-project-back.onrender.com//api/dishes/edit",
       {
         id: id,
         name: name,
@@ -40,7 +39,8 @@ export const editExistingDish = async (values: AllInOne) => {
         changes: changes,
         img: img,
         _id: _id,
-      }, {
+      },
+      {
         headers: {
           Authorization: `Bearer ${sessionStorage.getItem("user-token")}`,
         },

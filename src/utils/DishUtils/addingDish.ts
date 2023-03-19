@@ -21,10 +21,9 @@ export const pushingDishToBackend = async (values: AllInOne) => {
   const changes = values.changes;
   const img = values.img;
 
-  
   try {
     const addingDish = await axios.post(
-      "http://localhost:8000/api/dishes/adding",
+      "https://eran-epicure-project-back.onrender.com//api/dishes/adding",
       {
         id: id,
         name: name,
@@ -38,7 +37,8 @@ export const pushingDishToBackend = async (values: AllInOne) => {
         sides: sides,
         changes: changes,
         img: img,
-      },{
+      },
+      {
         headers: {
           Authorization: `Bearer ${sessionStorage.getItem("user-token")}`,
         },

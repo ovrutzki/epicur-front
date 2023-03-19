@@ -22,7 +22,7 @@ export const pushingRestToBackend = async (values: AllInOne) => {
 
   try {
     const addingRest = await axios.post(
-      "http://localhost:8000/api/restaurants/adding",
+      "https://eran-epicure-project-back.onrender.com//api/restaurants/adding",
       {
         id: id,
         name: name,
@@ -35,7 +35,8 @@ export const pushingRestToBackend = async (values: AllInOne) => {
         img: img,
         dishes: dishes,
         rating: rating,
-      }, {
+      },
+      {
         headers: {
           Authorization: `Bearer ${sessionStorage.getItem("user-token")}`,
         },

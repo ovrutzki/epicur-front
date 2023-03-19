@@ -3,7 +3,9 @@ import { IChefs } from "../store/store";
 
 let chefs: IChefs[] = [];
 const fetchChefsData = () => {
-  const response = fetch("http://localhost:8000/api/chefs")
+  const response = fetch(
+    "https://eran-epicure-project-back.onrender.com//api/chefs"
+  )
     .then((response) => {
       return response.json();
     })

@@ -18,19 +18,20 @@ export const editExistingChef = async (values: AllInOne) => {
 
   try {
     const addingChef = await axios.post(
-      "http://localhost:8000/api/chefs/edit",
+      "https://eran-epicure-project-back.onrender.com//api/chefs/edit",
       {
-          id: id,
-          name: name,
-          restaurant: restaurant,
-          age: age,
-          img: img,
-          about: about,
-          _id: _id,
+        id: id,
+        name: name,
+        restaurant: restaurant,
+        age: age,
+        img: img,
+        about: about,
+        _id: _id,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${sessionStorage.getItem("user-token")}`,
         },
-        {headers: {
-          Authorization: `Bearer ${sessionStorage.getItem("user-token")}`
-        }
       }
     );
     alert("details update");

@@ -17,20 +17,22 @@ export const pushingChefToBackend = async (values: AllInOne) => {
 
   try {
     const addingChef = await axios.post(
-      "http://localhost:8000/api/chefs/adding",
-       {
-          id: id,
-          name: name,
-          restaurant: restaurant,
-          age: age,
-          img: img,
-          about: about,
+      "https://eran-epicure-project-back.onrender.com//api/chefs/adding",
+      {
+        id: id,
+        name: name,
+        restaurant: restaurant,
+        age: age,
+        img: img,
+        about: about,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${sessionStorage.getItem("user-token")}`,
+          "Content-Type": "application/json",
         },
-        {headers: {
-          Authorization:`Bearer ${sessionStorage.getItem("user-token")}`,
-          'Content-Type': 'application/json'
-        },
-      });
+      }
+    );
     alert("chef added");
   } catch (err: any) {
     console.log(err.response.data);

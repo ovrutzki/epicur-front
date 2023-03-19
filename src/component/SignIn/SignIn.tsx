@@ -46,7 +46,7 @@ const SignIn: React.FC = () => {
   ) => {
     try {
       const userRegisterData = await axios.post(
-        "http://localhost:8000/api/users/register",
+        "https://eran-epicure-project-back.onrender.com//api/users/register",
         {
           first: first,
           last: last,
@@ -54,15 +54,15 @@ const SignIn: React.FC = () => {
           phone: phone,
           email: email,
           password: password,
-          role:"user"
+          role: "user",
         }
       );
-      successfullyRegister()
+      successfullyRegister();
     } catch (err: any) {
       if (err.response.status === 400) {
         console.log(err.response.data);
         alert(err.response.data);
-      } else if (err.response.status === 409){
+      } else if (err.response.status === 409) {
         console.log(err.response.data);
         alert(err.response.data);
         navigate("/log-in");
@@ -86,67 +86,72 @@ const SignIn: React.FC = () => {
   return (
     <>
       <Navbar />
-      
+
       <div id="sign-container">
         <div id="sign-main">
-        {greeting ? <h1>hello {firstName}, Please log-in now</h1> : 
-        <>
-        <div id="sign-title">
-          <h1>Sign Up</h1>
-          <h2>Please enter your details</h2>
+          {greeting ? (
+            <h1>hello {firstName}, Please log-in now</h1>
+          ) : (
+            <>
+              <div id="sign-title">
+                <h1>Sign Up</h1>
+                <h2>Please enter your details</h2>
+              </div>
+              <form id="sign-details" action="">
+                <label htmlFor="">First Name</label>
+                <input
+                  onChange={(e) => setFirstName(e.target.value)}
+                  type="text"
+                  name="first-name"
+                  placeholder="Enter Your First Name"
+                />
+                <label htmlFor="">Last Name</label>
+                <input
+                  onChange={(e) => setLastName(e.target.value)}
+                  type="text"
+                  name="last-name"
+                  placeholder="Enter Your Last Name"
+                />
+                <label htmlFor="">Address</label>
+                <input
+                  onChange={(e) => setAddress(e.target.value)}
+                  type="text"
+                  name="Address"
+                  placeholder="Enter Your Address"
+                />
+                <label htmlFor="">Phone</label>
+                <input
+                  onChange={(e) => setPhone(e.target.value)}
+                  type="text"
+                  name="phone"
+                  placeholder="Enter Your Phone Number"
+                />
+                <label htmlFor="">Email</label>
+                <input
+                  onChange={emailOnChange}
+                  type="text"
+                  name="email"
+                  placeholder="Email address"
+                />
+                <label htmlFor="">Password</label>
+                <input
+                  onChange={passwordOnChange}
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                />
+              </form>
+              <button
+                onClick={handleRegister}
+                id={black}
+                className="sign-in-btn"
+              >
+                SIGN UP
+              </button>
+              <section></section>
+            </>
+          )}
         </div>
-        <form id="sign-details" action="">
-          <label htmlFor="">First Name</label>
-          <input
-            onChange={(e) => setFirstName(e.target.value)}
-            type="text"
-            name="first-name"
-            placeholder="Enter Your First Name"
-          />
-          <label htmlFor="">Last Name</label>
-          <input
-            onChange={(e) => setLastName(e.target.value)}
-            type="text"
-            name="last-name"
-            placeholder="Enter Your Last Name"
-          />
-          <label htmlFor="">Address</label>
-          <input
-            onChange={(e) => setAddress(e.target.value)}
-            type="text"
-            name="Address"
-            placeholder="Enter Your Address"
-          />
-          <label htmlFor="">Phone</label>
-          <input
-            onChange={(e) => setPhone(e.target.value)}
-            type="text"
-            name="phone"
-            placeholder="Enter Your Phone Number"
-          />
-          <label htmlFor="">Email</label>
-          <input
-            onChange={emailOnChange}
-            type="text"
-            name="email"
-            placeholder="Email address"
-          />
-          <label htmlFor="">Password</label>
-          <input
-            onChange={passwordOnChange}
-            type="password"
-            name="password"
-            placeholder="Password"
-          />
-        </form>
-        <button onClick={handleRegister} id={black} className="sign-in-btn">
-          SIGN UP
-        </button>
-        <section></section>
-        </>
-        }
-        
-      </div>
       </div>
       <Footer />
     </>

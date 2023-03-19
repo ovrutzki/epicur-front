@@ -3,49 +3,57 @@ import { useSelector } from "react-redux";
 import { IDishes, IRestaurants, IRootState } from "../store/store";
 import { restaurantSlice } from "./restaurantSlicer";
 
-let dishes:IDishes[] = [];
+let dishes: IDishes[] = [];
 const fetchDishesData = () => {
-  const response = fetch("http://localhost:8000/api/dishes")
-  .then((response) => {
-    return response.json()
-  })
-  .catch((err) => console.log(err));
+  const response = fetch(
+    "https://eran-epicure-project-back.onrender.com//api/dishes"
+  )
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
   return response;
-}
+};
 
-dishes = await fetchDishesData()
+dishes = await fetchDishesData();
 
-let restaurants:IRestaurants[] = [];
+let restaurants: IRestaurants[] = [];
 const fetchRestaurantsData = () => {
-  const response = fetch("http://localhost:8000/api/restaurants")
-  .then((response) => {
-    return response.json()
-  })
-  .catch((err) => console.log(err));
+  const response = fetch(
+    "https://eran-epicure-project-back.onrender.com//api/restaurants"
+  )
+    .then((response) => {
+      return response.json();
+    })
+    .catch((err) => console.log(err));
   return response;
-}
+};
 
-restaurants = await fetchRestaurantsData()
+restaurants = await fetchRestaurantsData();
 
 export const dishesSlicer = createSlice({
   name: "dishes",
   initialState: {
     value: dishes,
-    allDishes : dishes,
+    allDishes: dishes,
     specificDishes: dishes,
-    restaurants: restaurants
+    restaurants: restaurants,
   },
   reducers: {
-    getDishesByRestId: (state,action) => {
-      state.specificDishes = state.allDishes.filter((dish) => dish.restaurantId === state.restaurants.find((rest) => rest.id === action.payload)?.id)
+    getDishesByRestId: (state, action) => {
+      state.specificDishes = state.allDishes.filter(
+        (dish) =>
+          dish.restaurantId ===
+          state.restaurants.find((rest) => rest.id === action.payload)?.id
+      );
     },
 
-    dishTimeFilter: (state,action) => {
+    dishTimeFilter: (state, action) => {
       switch (action.payload) {
         case "Breakfast":
           state.value = state.specificDishes.filter((dish) =>
             dish.time.find((time) => time === "breakfast")
-            );
+          );
           break;
         case "Lunch":
           state.value = state.specificDishes.filter((dish) =>
@@ -62,9 +70,9 @@ export const dishesSlicer = createSlice({
           state.value = state.specificDishes;
           break;
       }
-    }
+    },
   },
 });
 
-export const {dishTimeFilter,  getDishesByRestId} = dishesSlicer.actions
+export const { dishTimeFilter, getDishesByRestId } = dishesSlicer.actions;
 export default dishesSlicer.reducer;

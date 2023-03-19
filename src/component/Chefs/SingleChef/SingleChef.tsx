@@ -12,7 +12,9 @@ import axios from "axios";
 const SingleChef: React.FC<IChefCard> = (props) => {
   const navigate = useNavigate();
   const chefArray = useSelector((state: IRootState) => state.chefs.value);
-  const restArray = useSelector((state: IRootState) => state.restaurants.default);
+  const restArray = useSelector(
+    (state: IRootState) => state.restaurants.default
+  );
   let { chefId } = useParams();
   let chefIndex = chefArray.findIndex(
     (chef: IChefCard) => chef.id === Number(chefId)
@@ -42,32 +44,32 @@ const SingleChef: React.FC<IChefCard> = (props) => {
     openingDays: number[],
     openingYear: number,
     imageURL: string,
-    rating:string
+    rating: string
   ) => {
     try {
       const addingRest = await axios.post(
-        "http://localhost:8000/api/restaurants/adding",
+        "https://eran-epicure-project-back.onrender.com//api/restaurants/adding",
         {
           id: restArray.length + 1,
           name: restName,
-          address: [restLong,restLat],
+          address: [restLong, restLat],
           chef: restChef,
-          chefId:specificChef.id,
-          openHours: [openHour,closeHour],
+          chefId: specificChef.id,
+          openHours: [openHour, closeHour],
           openDays: openingDays,
           openYear: openingYear,
-          img:imageURL,
+          img: imageURL,
           dishes: [],
-          rating:`/image/rating/${rating}.svg`
+          rating: `/image/rating/${rating}.svg`,
         }
       );
       alert("restaurant added");
-    } catch (err:any) {
-        console.log(err.response.data);
-        alert(err.response.data);
+    } catch (err: any) {
+      console.log(err.response.data);
+      alert(err.response.data);
     }
   };
-  
+
   return (
     <>
       <Navbar />
