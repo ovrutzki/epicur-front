@@ -5,7 +5,7 @@ import { IRestaurants } from "../store/store";
 let restaurants: IRestaurants[] = [];
 const fetchRestaurantsData = () => {
   const response = fetch(
-    "https://eran-epicure-project-back.onrender.com//api/restaurants"
+    "https://eran-epicure-project-back.onrender.com/api/restaurants"
   )
     .then((response) => {
       return response.json();

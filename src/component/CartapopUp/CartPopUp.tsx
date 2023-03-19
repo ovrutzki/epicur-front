@@ -26,7 +26,7 @@ const CartPopUp: React.FC<ICartModal> = (props: ICartModal) => {
   const userCart = async () => {
     try {
       const getUserCart = await axios.get(
-        "https://eran-epicure-project-back.onrender.com//api/users/getCart",
+        "https://eran-epicure-project-back.onrender.com/api/users/getCart",
         {
           headers: {
             Authorization: `Bearer ${sessionStorage.getItem("user-token")}`,

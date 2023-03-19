@@ -13,7 +13,7 @@ export const addCartToUserData = async (dishToCart: IOrderState) => {
   const name = dishToCart.name;
   try {
     const addingDish = await axios.post(
-      "https://eran-epicure-project-back.onrender.com//api/users/addDish",
+      "https://eran-epicure-project-back.onrender.com/api/users/addDish",
       {
         dishId: id,
         restaurantId: restaurantId,

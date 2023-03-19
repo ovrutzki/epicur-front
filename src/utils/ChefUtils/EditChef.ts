@@ -18,7 +18,7 @@ export const editExistingChef = async (values: AllInOne) => {
 
   try {
     const addingChef = await axios.post(
-      "https://eran-epicure-project-back.onrender.com//api/chefs/edit",
+      "https://eran-epicure-project-back.onrender.com/api/chefs/edit",
       {
         id: id,
         name: name,

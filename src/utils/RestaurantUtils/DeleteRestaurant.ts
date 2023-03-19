@@ -3,7 +3,7 @@ import axios from "axios";
 export const deleteRestaurant = async (restId: number) => {
   try {
     const deleteItem = await axios.delete(
-      "https://eran-epicure-project-back.onrender.com//api/restaurants",
+      "https://eran-epicure-project-back.onrender.com/api/restaurants",
       {
         data: {
           _id: restId,
@@ -23,7 +23,7 @@ export const deleteRestaurant = async (restId: number) => {
 export const deleteRestaurantDishes = async (restId: number) => {
   try {
     const deleteItem = await axios.delete(
-      "https://eran-epicure-project-back.onrender.com//api/dishes/delete/restaurant-dishes",
+      "https://eran-epicure-project-back.onrender.com/api/dishes/delete/restaurant-dishes",
       {
         data: {
           restaurantId: restId,

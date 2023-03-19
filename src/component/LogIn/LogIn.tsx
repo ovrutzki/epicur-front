@@ -44,7 +44,7 @@ const LogIn: React.FC = () => {
   const loginUser = async (email: string, password: string) => {
     try {
       const userData = await axios.post(
-        "https://eran-epicure-project-back.onrender.com//api/users/login",
+        "https://eran-epicure-project-back.onrender.com/api/users/login",
         {
           email: email,
           password: password,

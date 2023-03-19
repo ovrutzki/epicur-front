@@ -22,7 +22,7 @@ export const pushingRestToBackend = async (values: AllInOne) => {
 
   try {
     const addingRest = await axios.post(
-      "https://eran-epicure-project-back.onrender.com//api/restaurants/adding",
+      "https://eran-epicure-project-back.onrender.com/api/restaurants/adding",
       {
         id: id,
         name: name,

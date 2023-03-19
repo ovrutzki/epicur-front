@@ -6,7 +6,7 @@ import { restaurantSlice } from "./restaurantSlicer";
 let dishes: IDishes[] = [];
 const fetchDishesData = () => {
   const response = fetch(
-    "https://eran-epicure-project-back.onrender.com//api/dishes"
+    "https://eran-epicure-project-back.onrender.com/api/dishes"
   )
     .then((response) => {
       return response.json();
@@ -20,7 +20,7 @@ dishes = await fetchDishesData();
 let restaurants: IRestaurants[] = [];
 const fetchRestaurantsData = () => {
   const response = fetch(
-    "https://eran-epicure-project-back.onrender.com//api/restaurants"
+    "https://eran-epicure-project-back.onrender.com/api/restaurants"
   )
     .then((response) => {
       return response.json();

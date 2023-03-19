@@ -17,7 +17,7 @@ export const pushingChefToBackend = async (values: AllInOne) => {
 
   try {
     const addingChef = await axios.post(
-      "https://eran-epicure-project-back.onrender.com//api/chefs/adding",
+      "https://eran-epicure-project-back.onrender.com/api/chefs/adding",
       {
         id: id,
         name: name,

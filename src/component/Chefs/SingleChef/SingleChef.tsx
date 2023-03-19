@@ -48,7 +48,7 @@ const SingleChef: React.FC<IChefCard> = (props) => {
   ) => {
     try {
       const addingRest = await axios.post(
-        "https://eran-epicure-project-back.onrender.com//api/restaurants/adding",
+        "https://eran-epicure-project-back.onrender.com/api/restaurants/adding",
         {
           id: restArray.length + 1,
           name: restName,

@@ -5,7 +5,7 @@ import { IDishes, IOrder, IOrderState } from "../store/store";
 let dishes: IDishes[] = [];
 const fetchDishesData = () => {
   const response = fetch(
-    "https://eran-epicure-project-back.onrender.com//api/dishes"
+    "https://eran-epicure-project-back.onrender.com/api/dishes"
   )
     .then((response) => {
       return response.json();

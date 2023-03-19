@@ -3,7 +3,7 @@ import axios from "axios";
 export const deleteDish = async (dishId: number) => {
   try {
     const deleteItem = await axios.delete(
-      "https://eran-epicure-project-back.onrender.com//api/dishes/delete/oneDish",
+      "https://eran-epicure-project-back.onrender.com/api/dishes/delete/oneDish",
       {
         data: {
           _id: dishId,

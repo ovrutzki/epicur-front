@@ -46,7 +46,7 @@ const SignIn: React.FC = () => {
   ) => {
     try {
       const userRegisterData = await axios.post(
-        "https://eran-epicure-project-back.onrender.com//api/users/register",
+        "https://eran-epicure-project-back.onrender.com/api/users/register",
         {
           first: first,
           last: last,

@@ -3,7 +3,7 @@ import axios from "axios";
 export const deleteChef = async (chefId: number) => {
   try {
     const deleteItem = await axios.delete(
-      "https://eran-epicure-project-back.onrender.com//api/chefs",
+      "https://eran-epicure-project-back.onrender.com/api/chefs",
       {
         data: {
           _id: chefId,
