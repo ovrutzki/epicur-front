@@ -1,0 +1,19 @@
+#mobile-menu{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    height: fit-content;
+    width: 100vw;
+    position: absolute;
+    top: 6vw;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    padding: 40px 20px;
+    gap: 40px;
+}
+#mobile-menu a{
+    all: unset;
+    cursor: pointer;
+    text-align: left;
+}

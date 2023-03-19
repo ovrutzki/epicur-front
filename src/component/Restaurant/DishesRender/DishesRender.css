@@ -1,0 +1,42 @@
+.dish-div {
+  margin-top: 3.3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 3vw;
+  gap: 2vw;
+}
+
+.img-rest {
+  height: 12vw;
+  object-fit: cover;
+}
+.card-downer-div {
+  all: unset;
+  height: 16.6vw;
+  position: relative;
+  padding: 5px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  background-color: #faf2e3;
+}
+#filter-dish {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+  margin: 3.5vw;
+}
+#filter-dish button:focus {
+  text-decoration: underline 2px rgba(222, 146, 0, 0.9);
+}
+
+@media screen and (max-width: 450px) {
+  #main-dishes{
+    align-self: flex-start;
+  }
+}

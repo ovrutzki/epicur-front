@@ -1,0 +1,7 @@
+#restaurant .rest:hover {
+  cursor: pointer;
+}
+#restaurant .rest {
+  display: flex;
+  flex-direction: column;
+}

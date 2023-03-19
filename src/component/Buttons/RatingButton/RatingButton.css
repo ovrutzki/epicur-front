@@ -1,0 +1,62 @@
+.rating-div {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 21.5vw;
+    border-radius: 8px;
+    gap: 7px;
+  }
+  .rating-popup {
+    all: unset; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    height: 22.5vw;
+    width: 24.5vw;
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    position: absolute;
+    left: -30%;
+    top: 100%;
+    gap: 0;
+    z-index: 1;
+  }
+  form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+  }
+  .rating-popup h2 {
+    font-family: "Helvetica medium";
+    font-size: 1.25vw;
+    /* line-height: 21px; */
+    letter-spacing: 1.9px;
+  }
+  .rating-popup p {
+    font-family: "Helvetica light";
+    font-size: 1.2vw;
+    font-weight: 200;
+    letter-spacing: 1.97px;
+  }
+  .stars{
+    height: 3vh;
+  }
+  .checkbox{
+    cursor: pointer;
+  }
+label{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+  input[type=checkbox]{
+    z-index: 1;
+    border: 1px black solid;
+    width: 10px;
+    height: 10px;
+  }

@@ -1,0 +1,261 @@
+#modal-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal {
+  background-color: none;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  max-height: 90vh;
+  overflow-y: scroll;
+}
+#modal::-webkit-scrollbar {
+  display: none;
+}
+#modal div {
+  background-color: white;
+}
+#close {
+  color: white;
+  font-size: 2vw;
+  align-self: self-start;
+}
+#close:hover {
+  font-weight: bolder;
+}
+#modal .food {
+  height: 20vw;
+}
+#modal .card-downer-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 16vw;
+  padding: 0 12vw;
+  height: fit-content;
+}
+#modal .card-downer-div h1 {
+  font-family: "Helvetica light";
+  font-size: 2vw;
+  line-height: 2vw;
+  letter-spacing: 2.6px;
+  text-align: center;
+  margin-top: 1vw;
+}
+#modal #about-dish {
+  height: fit-content;
+  margin-bottom: 3vw;
+}
+#modal .card-downer-div hr {
+  width: 6vw;
+}
+#modal-bottom {
+  width: 16vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0vw 12vw;
+  gap: 1.5vw;
+}
+#modal-bottom h1 {
+  text-decoration: underline rgba(222, 146, 0, 0.9);
+  font-size: 1.5vw;
+  line-height: 1.2vw;
+  letter-spacing: 1.9px;
+  text-align: center;
+}
+
+#modal label {
+  align-self: flex-start;
+  text-align: left;
+  font-size: 1.2vw;
+  font-weight: 200;
+  line-height: 18px;
+  letter-spacing: 1.9px;
+  text-align: center;
+}
+#quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vw;
+}
+#quantity div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vw;
+}
+#quantity p {
+  font-size: 2vw;
+}
+#cart-btn {
+  all: unset;
+  width: 12.6vw;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-size: 1.25vw;
+  line-height: 1.3vw;
+  letter-spacing: 2.6px;
+  text-align: center;
+  padding: 1vw 2.6vw;
+  margin-bottom: 2vw;
+}
+label {
+  cursor: pointer;
+  font-family:Helvetica light;
+  font-weight: bold;
+}
+
+.radio {
+  cursor: pointer;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+
+  border: 1px solid #000000;
+  transition: 0.2s all linear;
+  /* margin-right: 5px;
+
+  position: relative;
+  top: 4px; */
+}
+
+.radio:checked {
+  border: 1px solid black;
+  background-color: #000000;
+}
+.check {
+  cursor: pointer;
+}
+.check:checked {
+  background-color: #000000;
+  color: #000000;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5),
+    0px 1px 0px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5),
+    0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5),
+    0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+#quantity button {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#delete-dish-btn {
+  position: absolute;
+  margin-top: 5px;
+  font-family: Helvetica light;
+  font-weight: bold;
+  transform: translate(50%);
+  right: 50%;
+  bottom: 10px;
+  width: 8.7vw;
+  color: white;
+  background-color: black;
+}
+#delete-dish-btn:hover {
+  background-color: darkred;
+}
+
+@media screen and (max-width: 450px) {
+  #modal-content {
+    background-color: white;
+  }
+
+  #modal {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+  #close {
+    color: rgb(0, 0, 0);
+    font-size: 8vw;
+    font-weight: bolder;
+    align-self: self-start;
+    margin-left: 10px;
+  }
+  #modal .food {
+    width: 100%;
+    height: 64vw;
+  }
+  #modal .card-downer-div {
+    align-items: flex-start;
+    gap: 10px;
+    width: 90%;
+    padding: 0 4vw;
+    height: fit-content;
+  }
+  #modal .card-downer-div h1 {
+    font-family: "Helvetica light";
+    font-weight: bold;
+    font-size: 5vw;
+    line-height: 5vw;
+    letter-spacing: 2.6px;
+    text-align: left;
+    margin-top: 1vw;
+  }
+  #modal #about-dish {
+    height: fit-content;
+    margin-bottom: 3vw;
+  }
+  #modal .icon {
+    display: none;
+  }
+  #modal .price-div {
+    display: none;
+  }
+  #modal-bottom {
+    align-items: flex-start;
+    gap: 5vw;
+    width: 90%;
+    padding: 0 4vw;
+    height: fit-content;
+  }
+  #modal-bottom h1 {
+    font-size: 5vw;
+    line-height: 6vw;
+  }
+  #modal label {
+    font-size: 5vw;
+  }
+  #modal form {
+    gap: 5vw;
+  }
+  #quantity p {
+    font-size: 5vw;
+  }
+  #cart-btn {
+    height: 13vw;
+    width: 55vw;
+    font-size: 6vw;
+    font-family: "Helvetica light";
+    font-weight: bold;
+  }
+}

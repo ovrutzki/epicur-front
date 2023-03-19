@@ -1,0 +1,75 @@
+.slider-div {
+  margin-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 21.5vw;
+  height: 4vw;
+  border-radius: 8px;
+  background: rgba(249, 244, 234, 1);
+  position: relative;
+  padding-bottom: 0.7vw;
+}
+.slider-div section{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding-bottom: 1vw;
+}
+.price-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    pointer-events: all;
+    width: 1.6vw;
+    height: 1.6vw;
+    background-color: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .price-input::-moz-range-thumb {
+    pointer-events: all;
+    width: 30vw;
+    height: 1.6vw;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+     
+  .price-input::-webkit-slider-thumb:hover {
+    background: rgba(222, 146, 0, 1);
+  }
+  .price-input::-webkit-slider-thumb:active {
+    box-shadow: inset 0 0 3px rgba(222, 146, 0, 1), 0 0 9px rgba(222, 146, 0, 1);
+    -webkit-box-shadow: inset 0 0 3px rgba(222, 146, 0, 1),
+      0 0 9px rgba(222, 146, 0, 1);
+  }
+
+  #from-slider {
+    height: 0;
+    z-index: 1;
+  }
+  .price-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    height: 14vw;
+    width: 24.5vw;
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    left: -30%;
+    top: 100%
+  }
+  .price-popup h2 {
+    font-family: "Helvetica medium";
+    font-size: 1.25vw;
+    letter-spacing: 1.9px;
+  }
+  .price-popup p {
+    font-family: "Helvetica light";
+    font-size: 1.2vw;
+    font-weight: 200;
+    letter-spacing: 1.97px;
+  }

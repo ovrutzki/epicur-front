@@ -1,0 +1,89 @@
+#main-about {
+  display: flex;
+  margin-top: 8.5vw;
+  justify-content: start;
+  gap: 23vw;
+  background: rgba(250, 250, 250, 1);
+  width: 90%;
+  padding-left: 8.5vw;
+
+}
+#about {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+#about h1 {
+  font-family: "Helvetica";
+  font-size: 2vw;
+  font-weight: bold;
+  line-height: 2.5vw;
+  letter-spacing: 2.14px;
+  text-align: left;
+}
+#about p {
+  height: 23vw;
+  width: 40vw;
+  font-size: 1.5vw;
+  font-weight: 200;
+  letter-spacing: 2.14px;
+  text-align: left;
+}
+#about section {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+
+@media screen and (max-width: 450px) {
+  #main-about {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 8.5vw;
+    align-items: start;
+    gap: 7vw;
+    background: rgba(250, 250, 250, 1);
+    width: 95%;
+    padding-left: 5vw;
+    padding-bottom: 6vw;
+    padding-top: 8vw;
+    overflow-x: hidden;
+  }
+  #main-about img{
+    height: 25vw;
+  }
+  #about {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1vw;
+  }
+  #about img{
+    height: 10vw;
+  }
+  #about h1 {
+    position: absolute;
+    top: 26vw;
+    font-family: "Helvetica";
+    font-size: 5vw;
+    font-weight: bold;
+    line-height: 2.5vw;
+    letter-spacing: 2.14px;
+    text-align: left;
+  }
+  #about p {
+    margin-top: 12vw;
+    height: fit-content;
+    width: 90%;
+    font-size: 5vw;
+    font-weight: 200;
+    letter-spacing: 2.14px;
+    text-align: left;
+  }
+  #about section {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+  }
+}

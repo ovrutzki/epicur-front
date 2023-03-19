@@ -1,0 +1,245 @@
+#cart-container {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35vw;
+  box-shadow: 2px 4px 10px 0px rgba(175, 175, 175, 0.25);
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  direction: ltr;
+  gap: 2vw;
+  padding: 2vw 0;
+}
+#cart-container h1 {
+  font-family: Helvetica medium;
+  font-size: 2.2vw;
+  font-weight: 400;
+  line-height: 2vw;
+  letter-spacing: 1.25px;
+  text-align: center;
+}
+#cart-container h2 {
+  font-family: Helvetica;
+  font-size: 1.25vw;
+  font-weight: 200;
+  line-height: 1.25vw;
+  letter-spacing: 1.9px;
+  text-align: center;
+}
+#dish-in-cart {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  overflow-y: auto;
+  height: fit-content;
+  max-height: 18vw;
+  direction: ltr;
+}
+#dish-in-cart::-webkit-scrollbar {
+  width: 5px;
+  direction: ltr;
+}
+
+/* Track */
+#dish-in-cart::-webkit-scrollbar-track {
+  display: none;
+  direction: ltr;
+}
+
+/* Handle */
+#dish-in-cart::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  height: 80px;
+  width: 3px;
+  border-radius: 31px;
+  direction: ltr;
+  background: rgba(151, 151, 151, 0.5);
+}
+
+/* Handle on hover */
+#dish-in-cart::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+#single-dish {
+  display: flex;
+  width: 26vw;
+  height: 6.9vw;
+  background-color: rgba(249, 244, 234, 1);
+  gap: 1.5vw;
+}
+#single-dish img {
+  width: 6.9vw;
+  height: 6.9vw;
+  object-fit: cover;
+}
+#mid-div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.6vw;
+}
+#mid-up {
+  display: flex;
+  gap: 10px;
+  margin-top: 0.3vw;
+}
+#amount {
+  height: 2vw;
+  width: 2vw;
+  border-radius: 3.5px;
+  border: 2px rgba(151, 151, 151, 1) solid;
+  color: rgba(222, 146, 0, 1);
+  padding: 0.7vw;
+  font-size: 2vw;
+  font-family: Helvetica light;
+  font-weight: bold;
+  text-align: center;
+}
+#dish-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+#dish-name p {
+  font-family: Helvetica;
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: 1vw;
+  letter-spacing: 1.4px;
+  text-align: center;
+  color: rgba(222, 146, 0, 1);
+}
+#cart-container h3 {
+  font-family: Helvetica light;
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.25vw;
+  letter-spacing: 1px;
+  text-align: center;
+}
+#mid-down {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  max-width: 10vw;
+}
+#mid-down p {
+  font-family: Helvetica;
+  font-size: 1vw;
+  line-height: 1.2vw;
+  letter-spacing: 1.2px;
+  text-align: left;
+  width: max-content;
+}
+#mid-down hr {
+  all: unset;
+  border: 0.7px rgba(151, 151, 151, 1) solid;
+  height: 2vw;
+  margin-right: 3px;
+}
+#right-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5vw 0.5vw 0.5vw 0;
+}
+#right-div p {
+  align-self: self-end;
+  font-family: Helvetica light;
+  font-size: 1.2vw;
+}
+#delete{
+  align-self: flex-end;
+}
+#delete:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+#mid-hr {
+    all: unset;
+    border: 1px rgba(151, 151, 151, 1) solid;
+    border-radius: 4px;
+    width: 13vw;
+    margin-top: 2vw;
+}
+#cart-input {
+}
+textarea {
+  all: unset;
+  margin-top: 1vw;
+  padding: 1vw;
+  height: 10vw;
+  width: 25vw;
+  border-radius: 4px;
+  border: 0.6px solid rgba(151, 151, 151, 1);
+  resize: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#cart-input input::placeholder {
+  font-family: Helvetica;
+  font-size: 1vw;
+  line-height: 15px;
+  letter-spacing: 1.3px;
+  text-align: justify;
+  color: rgba(151, 151, 151, 1);
+}
+#btn-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+}
+#checkout-btn {
+  all: unset;
+  cursor: pointer;
+  height: 3.3vw;
+  width: 14vw;
+  background: rgb(0, 0, 0);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 5px 24px;
+  font-family: Helvetica light;
+  font-size: 1.25vw;
+  font-weight: bold;
+  line-height: 1.3vw;
+  letter-spacing: 2.67px;
+  border: 2px black solid;
+}
+#history-btn {
+  all: unset;
+  cursor: pointer;
+  height: 3.3vw;
+  width: 14vw;
+  background: rgb(255, 255, 255);
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 5px 24px;
+  font-family: Helvetica light;
+  font-size: 1.25vw;
+  font-weight: bold;
+  line-height: 1.3vw;
+  letter-spacing: 2.67px;
+  border: 2px black solid;
+}
+@media screen and (max-width: 450px) {
+  #cart-container {
+    width: 100%;
+    gap: 5vw;
+  }
+  #cart-container h1 {
+    font-size: 5vw;
+  }
+  #checkout-btn, #history-btn{
+    height:13vw;
+    width:55vw ;
+    font-size: 4.5vw;
+    font-family: "Helvetica light";
+    font-weight: bold;
+  }
+
+}

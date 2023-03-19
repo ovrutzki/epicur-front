@@ -1,0 +1,84 @@
+#admin-container {
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#filter-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px;
+}
+#restaurants-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+}
+#dishes-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+}
+#chefs-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+}
+table{
+    border-collapse: collapse;
+}
+th {
+    padding: 10px 3px;
+  border: 1px black solid;
+  background-color: rgba(245, 190, 0, 1);
+  font-size: 14px;
+  font-weight: bold;
+  max-width: 200px;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+td {
+  height: 40px;
+  border: 1px black solid;
+  font-family: Helvetica light;
+  font-weight: bold;
+  font-size: 12px;
+  max-width: 154px;
+  width: min-content;
+  word-wrap: break-word;
+  max-height: 50px;
+  overflow: hidden;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 3px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(249, 244, 234, 1);
+  }
+
+
+td img {
+  cursor: pointer;
+  height: 20px;
+}
+
+.delete-btn:hover{
+  background-color: red;
+  border-radius: 3px;
+}
+.edit-btn:hover{
+  background-color: rgb(3, 194, 61);
+  border-radius: 3px;
+}

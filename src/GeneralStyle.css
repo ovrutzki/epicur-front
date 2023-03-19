@@ -1,0 +1,63 @@
+* {
+  font-family: "Helvetica";
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica"),
+    url("./fonts/helvetica/HelveticaNeue.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Helvetica Bold";
+  src: local("Helvetica"),
+    url("./fonts/helvetica/Helvetica\ Neu\ Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Helvetica medium";
+  src: local("Helvetica"),
+    url("./fonts/helvetica/HelveticaNeue\ Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Helvetica light";
+  src: local("Helvetica"),
+    url("./fonts/helvetica/HelveticaNeue\ Light.ttf") format("truetype");
+  font-weight: 200;
+}
+
+h1 {
+  font-family: "Helvetica";
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 40px;
+  letter-spacing: 1.9700000286102295px;
+}
+h2 {
+  font-family: "Helvetica";
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 35px;
+  letter-spacing: 1.25px;
+  text-align: center;
+}
+h3 {
+  font-family: "Helvetica";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 47px;
+  letter-spacing: 2.6700000762939453px;
+  text-align: left;
+}
+button {
+  background: none;
+  background-color: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+button:hover {
+  cursor: pointer;
+}

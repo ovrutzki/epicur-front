@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6cfae798.css",
+    "main.js": "/static/js/main.6bd891e2.js",
+    "static/media/HelveticaNeue.ttf": "/static/media/HelveticaNeue.50a6cd509ab1a89a5956.ttf",
+    "static/media/HelveticaNeue Light.ttf": "/static/media/HelveticaNeue Light.2d7491fe233df3ce53e2.ttf",
+    "static/media/HelveticaNeue Medium.ttf": "/static/media/HelveticaNeue Medium.64ab5024acf8e1619abc.ttf",
+    "static/media/Helvetica Neu Bold.ttf": "/static/media/Helvetica Neu Bold.61acdee6f288cddccf23.ttf",
+    "static/media/search.svg": "/static/media/search.9a00955f1d46a88c2afa.svg",
+    "index.html": "/index.html",
+    "main.6cfae798.css.map": "/static/css/main.6cfae798.css.map",
+    "main.6bd891e2.js.map": "/static/js/main.6bd891e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cfae798.css",
+    "static/js/main.6bd891e2.js"
+  ]
+}

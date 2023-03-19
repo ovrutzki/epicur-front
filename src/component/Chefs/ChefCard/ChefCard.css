@@ -1,0 +1,39 @@
+#main-chef {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1440px;
+  gap: 1.5vw;
+}
+#chef-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  margin-top: 3vw;
+}
+#chef-section:hover{
+  cursor: pointer;
+}
+#chef-section img {
+  height: 23vw;
+  width: 26vw;
+  object-fit: cover;
+}
+#chef-section h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  bottom: -0.1vw;
+  height: 5.5vw;
+  font-family: "Helvetica light";
+  font-size: 2.8vw;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  line-height: 2.5vw;
+  text-align: center;
+}
