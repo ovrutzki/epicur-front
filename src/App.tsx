@@ -10,6 +10,7 @@ import SingleRest from "./component/Restaurant/SingleRestPage/SingleRest";
 import SignIn from "./component/SignIn/SignIn";
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
