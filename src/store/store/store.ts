@@ -116,6 +116,7 @@ export interface IUserNoPassword{
   last?:string;
   phone?:string;
   address?:string;
+  role?:string;
 }
 
 export interface IUserState{

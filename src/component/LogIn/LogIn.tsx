@@ -74,6 +74,7 @@ const LogIn: React.FC = () => {
   const navigateFunction = () => {
     navigate("/");
   };
+ 
   const afterLogIn = () => {
     dishInCart.map((dish) => {
       addCartToUserData(dish);
@@ -85,6 +86,9 @@ const LogIn: React.FC = () => {
     sessionStorage.clear();
     dispatch(emptyCart());
     setTimeout(navigateFunction, 1000);
+  };
+  const adminPage = () => {
+    navigate("/admin");
   };
 
   return (
@@ -100,6 +104,7 @@ const LogIn: React.FC = () => {
               <button onClick={logOut} id="sign-in-btn">
                 LOG OUT
               </button>
+              {userSelector.role === "admin" ? <button onClick={adminPage} className="admin-btn">ADMIN</button> : null}
             </>
           ) : (
             <>

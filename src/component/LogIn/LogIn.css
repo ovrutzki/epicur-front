@@ -52,6 +52,7 @@
     letter-spacing: 1.97px;
     text-align: left;
   }
+
   .login-btn {
     all: unset;
     cursor: pointer;
@@ -95,7 +96,8 @@
       width: 11vw;
       height: 0;
   }
-  #sign-in-btn {
+  
+  #sign-in-btn, .admin-btn{
     all: unset;
     cursor: pointer;
     height: 3.3vw;
@@ -111,7 +113,7 @@
     letter-spacing: 2.67px;
     border: 2px black solid;
   }
-  #sign-in-btn:hover{
+  #sign-in-btn:hover, .admin-btn:hover{
       background-color: rgba(81, 81, 81, 1);
   }
   span{
