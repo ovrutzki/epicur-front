@@ -47,10 +47,10 @@ export const orderSlicer = createSlice({
       state.value = action.payload.dishInCart;
       sessionStorage.setItem("dish-in-cart", JSON.stringify(state.value));
       console.log(action.payload.dishInCart);
-      state.checkoutPrice = action.payload.dishInCart.map(
-        (price: any) => (state.checkoutPrice += price.totalPrice)
-      );
-      state.checkoutPrice = action.payload.dishInCart.reduce(
+      const totalPriceArray = action.payload.dishInCart.map(
+        (price: any) =>  price.totalPrice)
+
+      state.checkoutPrice = totalPriceArray.reduce(
         (accumulator: number, currentValue: number) =>
           accumulator + currentValue,0);
     },
@@ -60,7 +60,6 @@ export const orderSlicer = createSlice({
     deleteFromCart: (state: IOrder, action) => {
       const dishToRemoveIndex = state.value.findIndex((dish) => dish.dishId === action.payload);
       delete state.value[dishToRemoveIndex];
-      console.log(action.payload);
       deleteFromCartDB(action.payload)
       }
   },
