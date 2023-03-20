@@ -12,7 +12,6 @@ export const deleteFromCartDB = async (dishId: number) => {
         {
           data: {
             dishId: dishId,
-            user: userDataObj.email
           },
           headers: {
             Authorization: `Bearer ${sessionStorage.getItem("user-token")}`,
