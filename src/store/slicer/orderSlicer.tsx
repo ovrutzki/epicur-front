@@ -26,6 +26,13 @@ export const orderSlicer = createSlice({
     checkoutPrice: 0,
   },
   reducers: {
+    deleteFromCart: (state: IOrder, action) => {
+      const dishToRemoveIndex = state.value.findIndex((dish) => dish.dishId === action.payload);
+      delete state.value[dishToRemoveIndex];
+      if(sessionStorage.getItem('user-token')){
+        deleteFromCartDB(action.payload)
+      }
+      },
     addToCart: (state: IOrder, action) => {
       if (
         state.value.every(
@@ -46,7 +53,6 @@ export const orderSlicer = createSlice({
     getCartFromDb: (state: IOrder, action) => {
       state.value = action.payload.dishInCart;
       sessionStorage.setItem("dish-in-cart", JSON.stringify(state.value));
-      console.log(action.payload.dishInCart);
       const totalPriceArray = action.payload.dishInCart.map(
         (price: any) =>  price.totalPrice)
 
@@ -57,11 +63,7 @@ export const orderSlicer = createSlice({
     emptyCart: (state) => {
       state.value = [];
     },
-    deleteFromCart: (state: IOrder, action) => {
-      const dishToRemoveIndex = state.value.findIndex((dish) => dish.dishId === action.payload);
-      delete state.value[dishToRemoveIndex];
-      deleteFromCartDB(action.payload)
-      }
+    
   },
 });
 
