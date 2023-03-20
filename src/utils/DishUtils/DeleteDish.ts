@@ -19,3 +19,4 @@ export const deleteDish = async (dishId: number) => {
     console.log(error);
   }
 };
+

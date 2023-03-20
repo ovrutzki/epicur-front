@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { deleteDish } from "../../utils/DishUtils/DeleteDish";
+import axios from "axios";
 import { addCartToUserData } from "../../utils/UserUtils/addCartToUserData";
+import { deleteFromCartDB } from "../../utils/UserUtils/deleteDishFromCart";
 import { IDishes, IOrder, IOrderState } from "../store/store";
 
 let dishes: IDishes[] = [];
@@ -51,9 +52,7 @@ export const orderSlicer = createSlice({
       );
       state.checkoutPrice = action.payload.dishInCart.reduce(
         (accumulator: number, currentValue: number) =>
-          accumulator + currentValue,
-        0
-      );
+          accumulator + currentValue,0);
     },
     emptyCart: (state) => {
       state.value = [];
@@ -61,10 +60,9 @@ export const orderSlicer = createSlice({
     deleteFromCart: (state: IOrder, action) => {
       const dishToRemoveIndex = state.value.findIndex((dish) => dish.dishId === action.payload);
       delete state.value[dishToRemoveIndex];
-      console.log(state.value);
-
-      deleteDish(action.payload)
-    },
+      console.log(action.payload);
+      deleteFromCartDB(action.payload)
+      }
   },
 });
 
