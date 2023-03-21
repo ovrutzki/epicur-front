@@ -23,6 +23,7 @@ const CartPopUp: React.FC<ICartModal> = (props: ICartModal) => {
   const userDataObj = userDataString && JSON.parse(userDataString);
   const [dishesInCart, setDishesInCart] = useState(dishesInCartArray);
   const [flag, setFlag] = useState<boolean>(false);
+  const [renderPopUp, setRenderPopUp] = useState<boolean>(false);
   const userCart = async () => {
     try {
       const getUserCart = await axios.get(
@@ -51,7 +52,8 @@ const CartPopUp: React.FC<ICartModal> = (props: ICartModal) => {
   const [checkOut, setCheckOut] = useState(0);
   useEffect(() => {
     setCheckOut(checkOut + checkoutPrice);
-  }, []);
+    setDishesInCart(dishesInCartArray);
+  }, [renderPopUp]);
 
   return (
     <div ref={props.refprops} id="cart-container">
@@ -88,7 +90,9 @@ const CartPopUp: React.FC<ICartModal> = (props: ICartModal) => {
                   </div>
                   <div id="right-div">
                     <button
-                      onClick={() => dispatch(deleteFromCart(dish.dishId))}
+                      onClick={() => (
+                        dispatch(deleteFromCart(dish.dishId)) && setRenderPopUp(!renderPopUp)
+                        )}
                       id="delete"
                     >
                       X

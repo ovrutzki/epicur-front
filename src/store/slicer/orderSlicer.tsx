@@ -27,8 +27,7 @@ export const orderSlicer = createSlice({
   },
   reducers: {
     deleteFromCart: (state: IOrder, action) => {
-      const dishToRemoveIndex = state.value.findIndex((dish) => dish.dishId === action.payload);
-      delete state.value[dishToRemoveIndex];
+      state.value = state.value.filter((dish) => dish.dishId !== action.payload)
       if(sessionStorage.getItem('user-token')){
         deleteFromCartDB(action.payload)
       }

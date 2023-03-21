@@ -18,5 +18,7 @@ export const deleteDish = async (dishId: number) => {
     alert(error.message);
     console.log(error);
   }
+  window.location.reload()
+
 };
 

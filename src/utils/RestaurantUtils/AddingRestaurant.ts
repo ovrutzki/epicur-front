@@ -47,4 +47,6 @@ export const pushingRestToBackend = async (values: AllInOne) => {
     console.log(err.response.data);
     alert(err.response.data);
   }
+  window.location.reload()
+
 };

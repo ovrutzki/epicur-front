@@ -18,4 +18,6 @@ export const deleteChef = async (chefId: number) => {
     alert(error.message);
     console.log(error);
   }
+  window.location.reload()
+
 };

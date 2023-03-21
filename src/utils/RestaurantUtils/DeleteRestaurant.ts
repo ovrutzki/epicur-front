@@ -38,4 +38,6 @@ export const deleteRestaurantDishes = async (restId: number) => {
     alert(error.message);
     console.log(error);
   }
+  window.location.reload()
+
 };

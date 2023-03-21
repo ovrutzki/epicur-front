@@ -166,10 +166,10 @@
     width: 13vw;
     margin-top: 2vw;
 }
-#cart-input {
-}
+
 textarea {
   all: unset;
+  display: flex;
   margin-top: 1vw;
   padding: 1vw;
   height: 10vw;
@@ -240,6 +240,115 @@ textarea {
     font-size: 4.5vw;
     font-family: "Helvetica light";
     font-weight: bold;
+  }
+  #dish-in-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    overflow-y: auto;
+    height: fit-content;
+    max-height: 50vw;
+    direction: ltr;
+    width: 75vw;
+  }
+  textarea {
+    height: 15vw;
+    width: 70vw;
+  }
+  #single-dish {
+    display: flex;
+    justify-content: space-between;
+    width: 75vw;
+    height: 19vw;
+    background-color: rgba(249, 244, 234, 1);
+    gap: 1.5vw;
+  }
+  #single-dish img {
+    width: 19vw;
+    height: 19vw;
+    object-fit: cover;
+  }
+  #mid-div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.6vw;
+  }
+  #mid-up {
+    display: flex;
+    gap: 10px;
+    margin-top: 0.3vw;
+  }
+  #amount {
+    height: 5vw;
+    width: 5vw;
+    border-radius: 3.5px;
+    border: 2px rgba(151, 151, 151, 1) solid;
+    color: rgba(222, 146, 0, 1);
+    padding: 0.7vw;
+    font-size: 5vw;
+    font-family: Helvetica light;
+    font-weight: bold;
+    text-align: center;
+  }
+  #dish-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  
+  #dish-name p {
+    font-family: Helvetica;
+    font-size: 3vw;
+    font-weight: 400;
+    line-height: 3vw;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: rgba(222, 146, 0, 1);
+  }
+  #cart-container h3 {
+    font-family: Helvetica light;
+    font-size: 4vw;
+    font-weight: 400;
+    line-height: 4vw;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  #mid-down {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    max-width: 10vw;
+  }
+  #mid-down p {
+    margin-top: 1vw;
+    font-family: Helvetica;
+    font-size: 3.5vw;
+    line-height: 3.5vw;
+    letter-spacing: 1.2px;
+    text-align: left;
+    width: max-content;
+  }
+  #mid-down hr {
+    all: unset;
+    border: 0.7px rgba(151, 151, 151, 1) solid;
+    height: 4vw;
+    margin-right: 3px;
+  }
+  #right-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5vw 0.5vw 0.5vw 0;
+  }
+  #right-div p {
+    align-self: self-end;
+    font-family: Helvetica light;
+    font-size: 3vw;
+  }
+  #delete{
+    align-self: flex-end;
   }
 
 }
